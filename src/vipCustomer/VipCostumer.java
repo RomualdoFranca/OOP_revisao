@@ -9,7 +9,6 @@ public class VipCostumer {
 //  Os 3 construtores foram criados na ordem inversa
     public VipCostumer() {
         this("Default name", 10000.0, "Default address");
-        System.out.println("Empty constructor called");
     }
 //  Esse construtor guarda os valores nas instancias 'name' e 'creditLimit'. A instancia 'email' é atribuida um valor default
     public VipCostumer(String name, double creditLimit) {
