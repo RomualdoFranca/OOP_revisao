@@ -9,10 +9,14 @@ public class Application {
 
         // Fazendo o output das variaveis de instacias ja que não ha nenhum 'sout' dentro dos getters,
         System.out.println(client1.getAccountNumber());
-        System.out.println(client1.getCustomerName());
         // Nao precisa 'sout' aqui pois ja estao contidos nos metodos na classe BankAccount
         client1.deposit(500.00);
         client1.withdrawal(140.0);
+        BankAccount client2 = new BankAccount("Lua", "lua@email.com", "98765");
+        System.out.println(client2.getCustomerName());
+        System.out.println(client2.getEmail());
+        System.out.println(client2.getPhoneNumber());
+
 
         // Atribuindo os valores nas variaveis de instancia sem construtor
 //        client1.setAccountNumber("001");

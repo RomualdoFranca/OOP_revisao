@@ -8,10 +8,24 @@ public class BankAccount {
     private String email;
     private String phoneNumber;
 
-//  O construtor serve para iniciar o objeto que foi criado
+//  O construtor vazio, ou seja, sem parametros, serve para iniciar o objeto que foi criado
     public BankAccount() {
+        //  Chamando um construtor noutro construtor. Se quisermos criar um objeto com valores pre definidos
+        // Se um objeto for criado sem nenhum parametro, esses parametros dentro do 'this' criará o objeto
+        this("000", 0.01, "Default name", "Default address", "Default phone");
         System.out.println("Empty constructor called");
     }
+
+    // A desvantagem de criar um construtor sem atribuir valor a todas as variaveis de instacia é que os valores que
+    // estao sem valor, serao atualizados automaticamente
+    public BankAccount(String customerName, String email, String phoneNumber) { // criado automaticamente
+//  Evita a atualizacao automatica dos instacias sem atribuicao
+        this("111", 0.00, customerName, email, phoneNumber);
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
     public BankAccount(String accountNumber, double balance, String customerName,
                        String email, String phoneNumber) {
 
@@ -22,6 +36,9 @@ public class BankAccount {
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
+
+
+
 
 //  Esse metodo nao retorna nenhum valor. Apenas atualiza o atributo 'balance'
 // O metodo 'void' atualiza as variaveis de instancia
