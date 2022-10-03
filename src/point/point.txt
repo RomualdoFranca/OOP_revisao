@@ -9,6 +9,7 @@ Write the following methods (instance methods):
 * Method named getY without any parameters, it needs to return the value of y field.
 * Method named setX with one parameter of type int, it needs to set the value of the x field.
 * Method named setY with one parameter of type int, it needs to set the value of the y field.
+
 * Method named distance without any parameters, it needs to return the distance between this Point and Point 0,0 as double.
 * Method named distance with two parameters x, y both of type int, it needs to return the distance between this
 Point and Point x,y as double.
@@ -41,10 +42,12 @@ distance()= 0.0
 
 NOTE: Use Math.sqrt to calculate the square root √.
 
-NOTE: Try to avoid duplicated code.
+EXPLANATION
+^Formula!
 
-NOTE: All methods should be defined as public NOT public static.
-
-NOTE: In total, you have to write 7 methods.
-
-NOTE: Do not add a main method to the solution code.
+xA = this.x; (the x from Point "A", our instance variable x)
+yA = this.y; (the y from Point "A", our instance variable y)
+xB = 0.0; (the instructions tell us to calculate between our Point and 0,0, I use 0.0 because it returns a double,
+by writing a decimal number, it gives me a reminder of what for the data is going to be)
+yB = 0.0;  (the instructions tell us to calculate between our Point and 0,0, I use 0.0 because it returns a double,
+by writing a decimal number, it gives me a reminder of what for the data is going to be)
