@@ -42,7 +42,8 @@ public class Wall {
     private double height;
 
     public Wall() {
-        System.out.println("Empty constructor called");
+        this(0, 0);
+
     }
 
     public Wall(double width, double height) {
@@ -55,7 +56,8 @@ public class Wall {
     }
 
     public void setWidth(double width) {
-        if (this.width < 0) {
+        //      se dentro do if tiver this.width, o resultado dá incorreto.
+        if (width < 0) {
             this.width = 0;
 
         }else this.width = width;
@@ -67,8 +69,9 @@ public class Wall {
     }
 
     public void setHeight(double height) {
+//      se dentro do if tiver this.height, o resultado dá incorreto.
 
-        if (this.height < 0) {
+        if (height < 0) {
             this.height = 0;
 
         }else this.height = height;
